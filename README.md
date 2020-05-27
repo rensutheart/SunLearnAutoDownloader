@@ -12,7 +12,7 @@ However, since I don't have administrative rights to add it, I wrote a quick scr
   <li>Under the gear icon click 'Manual grading'</li>
   <li>Click on 'grade all' next to the question you are interested in</li>
   <li>Under 'Attempts to grade' you will see the total attempts in backets, fill that number in for 'Questions per page'. If the number of attempts is very large, your browser might not be able to handle it, and you will need to break it up into segments which will individually be processed by the script.</li>
-  <li>Right-click somewhere on the page (or Ctrl-S) and save the file somewhere as 'HTML Only'. The location where you save it will be the 'html_file_path' in the script</li>
+  <li>Right-click somewhere on the page (or Ctrl-S) and save the file somewhere as 'HTML Only' (on Google Chrome). The location where you save it will be the 'html_file_path' in the script</li>
   <li>Download one of the submissions and note where it is saved automatically. This is your 'browser_download_location' in the script.</li>
   <li><strong>Do not close the Moodle tab, since you must remain logged in for the downloader to work</strong></li>
 </ol>
