@@ -4,7 +4,7 @@ This Python script can automatically download the documents that were submitted 
 A plugin already exists for Moodle that can achieve this:
 https://moodle.org/plugins/quiz_downloadsubmissions
 
-However, since I don't have administrative rights to add it, I wrote a quick script that does it automatically from the HTML.
+However, since I don't have administrative rights to add it, I wrote a quick script that does it automatically from the HTML. <strong> One major advantage of this tool is that it also renames the files to the student number instead the random filenames that students assign.</strong>
 
 <h2>Step 1: Download HTML file</h2>
 <ol>
