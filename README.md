@@ -8,7 +8,7 @@ However, since I don't have administrative rights to add it, I wrote a quick scr
 
 <h2>Step 1: Download HTML file</h2>
 <ol>
-  <li>Log in to the moodle system (SunLearn) and open the assignment</li>
+  <li>Log in to the moodle system (SunLearn) and open the quiz</li>
   <li>Under the gear icon click 'Manual grading'</li>
   <li>Click on 'grade all' next to the question you are interested in</li>
   <li>Under 'Attempts to grade' you will see the total attempts in backets, fill that number in for 'Questions per page'. If the number of attempts is very large, your browser might not be able to handle it, and you will need to break it up into segments which will individually be processed by the script.</li>
