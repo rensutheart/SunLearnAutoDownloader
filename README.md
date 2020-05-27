@@ -21,7 +21,7 @@ However, since I don't have administrative rights to add it, I wrote a quick scr
 <ol>
    <li>Download the script and open it in a text editor</li>
   <li>Update the paths according to what was determined in Step 1 and set a name for the question. This will be the name of the folder in which the files will be saved.</li>
-  <li>If you have a slow internet connection or if the files are very large you can increase the 'DOWNLOAD_TIMEOUT_SECONDS' value</li><li>Ensure Python 3.7 is installed and run the file with the <code>python AutoDownloadScript.py</code></li>
+  <li>If you have a slow internet connection or if the files are very large you can increase the 'DOWNLOAD_TIMEOUT_SECONDS' value</li><li>Ensure Python 3.7 is installed and run the file. This can be done from the command line/terminal, by navigating to the folder where the script is saved and typing <code>python AutoDownloadScript.py</code></li>
   <li>A folder will now be created and all the files will be downloaded into that folder.</li>
   
 </ol>
