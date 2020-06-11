@@ -45,7 +45,7 @@ class MyHTMLParser(HTMLParser):
         if self.read_data_link_a:
             #print('filename: ', data)
             trimmed_data = data.strip()
-            dataList[-1]['FileName_' + str(self.link_count)] = trimmed_data
+            dataList[-1]['FileName_' + str(self.link_count)] = trimmed_data.replace("%20", " ")
             dataList[-1]['Extention_' + str(self.link_count)] = trimmed_data[trimmed_data.rfind('.'):].lower()
             self.read_data_link_a = False
             self.link_count += 1
