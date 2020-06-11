@@ -37,7 +37,7 @@ class MyHTMLParser(HTMLParser):
             if data.startswith('Attempt'):
                 #print("Links: ", self.link_count)
                 #print('Name:', data[data.find('for') + 4:])
-                dataList.append({'Name': data[data.find('for') + 4:data.find('(')-1], 'StudentNum': data[data.find('(') + 1:data.find(')')-1]})
+                dataList.append({'Name': data[data.find('for') + 4:data.find('(')-1], 'StudentNum': data[data.find('(') + 1:data.find(')')]})
                 self.look_for_next_link = True  # expect a link to follow soon
                 self.link_count = 0
             self.read_data_name = False
@@ -74,7 +74,7 @@ else:
 print('Starting from index', start_index )
 
 for i in range(start_index, len(df.get('StudentNum'))):
-    print('Processing student: ', df.get('StudentNum')[i])
+    print('{}: Processing student: {}'.format(i,df.get('StudentNum')[i]))
     start_time = time()
 
     link_count = 0
@@ -97,7 +97,7 @@ for i in range(start_index, len(df.get('StudentNum'))):
 
                 if not os.path.exists(browser_download_location + question_name):
                     os.makedirs(browser_download_location + question_name)
-
+                sleep(0.5) # some times chrome conflicts and the file is not moved correctly
                 shutil.move(browser_download_location + df.get('FileName_' + str(link_count))[i], '{}{}/{}_{}{}'.format(browser_download_location, question_name, df.get('StudentNum')[i], link_count, df.get('Extention_' + str(link_count))[i]))
 
                 print('\tDone with ', df.get('FileName_' + str(link_count))[i])
