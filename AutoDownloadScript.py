@@ -2,7 +2,7 @@ from html.parser import HTMLParser
 import webbrowser
 import shutil
 import pandas as pd
-from time import time
+from time import time, sleep
 import os
 
 question_name = '1B'
