@@ -98,8 +98,10 @@ for i in range(start_index, len(df.get('StudentNum'))):
                 if not os.path.exists(browser_download_location + question_name):
                     os.makedirs(browser_download_location + question_name)
                 sleep(0.5) # some times chrome conflicts and the file is not moved correctly
-                shutil.move(browser_download_location + df.get('FileName_' + str(link_count))[i], '{}{}/{}_{}{}'.format(browser_download_location, question_name, df.get('StudentNum')[i], link_count, df.get('Extention_' + str(link_count))[i]))
-
+                try:
+                    shutil.move(browser_download_location + df.get('FileName_' + str(link_count))[i], '{}{}/{}_{}{}'.format(browser_download_location, question_name, df.get('StudentNum')[i], link_count, df.get('Extention_' + str(link_count))[i]))
+                except:
+                    print("Skipped " + df.get('Link_' + str(link_count))[i])
                 print('\tDone with ', df.get('FileName_' + str(link_count))[i])
 
             #sleep(0.1)
