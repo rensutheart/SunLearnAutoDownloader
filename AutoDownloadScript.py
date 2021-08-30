@@ -82,7 +82,7 @@ for i in range(start_index, len(df.get('StudentNum'))):
     for col in df.columns:
         if 'Link' in col:
             #print(df.get('Link_' + str(link_count))[i])
-            if not (pd.isna(df.get('Link_' + str(link_count))[i])): # check for NaN
+            if not (pd.isna(df.get('Link_' + str(link_count))[i])) and ("forcedownload=1" in df.get('Link_' + str(link_count))[i]): # check for NaN
                 try:
                     webbrowser.open(df.get('Link_' + str(link_count))[i], new=2)
                 except:
